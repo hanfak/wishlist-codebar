@@ -16,6 +16,7 @@ $(document).ready(function() {
   $(document).on('click', 'span.label.pending', function(){
     var li_node = $(this).parent();
     li_node.append("<span class='label success'>Done!</span>");
+    li_node.addClass('completed');
     $(this).remove();
   });
 });
