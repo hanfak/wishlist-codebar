@@ -7,7 +7,8 @@ function addToList(item) {
 function updateTotal() {
   var pending = $("span.pending").length;
   var completed = $("span.success").length;
-  return  'Pending: ' + pending + ' Completed: ' + completed;
+  var message = 'Pending: ' + pending + ' Completed: ' + completed;
+  $(".total").text(message);
 }
 
 
@@ -18,6 +19,7 @@ $(document).ready(function() {
     addToList($('#item').val());
     $('#item').val('');
     $('#item').focus();
+    updateTotal();
   });
 
   $(document).on('click', 'span.label.pending', function(){
@@ -25,5 +27,6 @@ $(document).ready(function() {
     li_node.append("<span class='label success'>Done!</span>");
     li_node.addClass('completed');
     $(this).remove();
+    updateTotal();
   });
 });
