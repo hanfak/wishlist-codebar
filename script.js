@@ -4,6 +4,13 @@ function addToList(item) {
   $('#items').append('<li>' + item + pending + "</li>");
 }
 
+function updateTotal() {
+  var pending = $("span.pending").length;
+  var completed = $("span.success").length;
+  return  'Pending: ' + pending + ' Completed: ' + completed;
+}
+
+
 $(document).ready(function() {
   $("#item").focus();
 
