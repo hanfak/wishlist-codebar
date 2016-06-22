@@ -1,6 +1,7 @@
 /* Exercise 1: Wish list */
 function addToList(item) {
-  $('#items').append('<li>' + item + '</li>');
+  var pending = "<span class='label pending'>Pending</span>";
+  $('#items').append('<li>' + item + pending + "</li>");
 }
 
 $(document).ready(function() {
@@ -11,5 +12,4 @@ $(document).ready(function() {
     $('#item').val('');
     $('#item').focus();
   });
-
 });
