@@ -67,6 +67,7 @@ ol#items li {
 
 .label.pending {
   background-color: #d95a6a;
+  cursor: pointer;
 }
 
 .label.success {
